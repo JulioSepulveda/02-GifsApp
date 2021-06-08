@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+}
+
+/* height hace referencia a la pantalla 
+   min-height hace referencia al tamaño mínimo*/
+/* #sidebar hace referencia al atributo que hemos declarado en el app.component.html con ese id */
+#sidebar {
+    height: 100%;
+    min-height: 100vh;
+    min-width: 180px;
+}

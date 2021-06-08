@@ -1,0 +1,22 @@
+<h5>Buscar:</h5>
+
+<!-- Para recoger el valor escrito no utilizamos forms module ya que no vamos a importar la librería solo para un buscador.
+Si fueran más si sería interesante. Utiliazmos keyup, el cual nos recoge cualquier acción que se realice en el buscador. 
+Con event podemos recoger que acción se ha realizado (escribir, pulsar enter, etc...) -->
+<!-- <input 
+    type="text" 
+    class="form-control" 
+    placeholder="Buscar gifts..."
+    (keyup)="buscar( $event );"
+> -->
+
+<!-- Es mejor utilizar keyup.enter de esta forma recogemos la información solo cuando se pulsa el enter en el buscador. 
+con #txtBuscar lo que hacemos es recoger el valor introducido -->
+<input 
+    type="text" 
+    class="form-control" 
+    placeholder="Buscar gifts..."
+    (keyup.enter)="buscar( txtBuscar.value );"
+    #txtBuscar
+>
+

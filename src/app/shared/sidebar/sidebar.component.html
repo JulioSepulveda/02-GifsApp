@@ -1,0 +1,23 @@
+<!-- bg-dark pone el fondo oscuro 
+    border-right añade un borde a laderecha -->
+<div class="bg-dark border-right p-3" id="sidebar">
+
+    <!-- text-light pone el texto en claro 
+        Para extender el sidebar hasta el final de la hoja tenemos que ir a styles.css-->
+    <h3 class="text-light">
+        Gifs-App
+    </h3>
+
+    <!-- Línea horizontal de separación -->
+    <hr class="text-white" />
+    <!-- las clases son propias de bootstrap -->
+    <div class="list-group list-reset">
+        <a *ngFor="let item of historial" 
+            (click)="buscar(item)"
+            href="#" 
+            class="list-group-item list-group-item-action">
+            <!-- con titlecase lo que hacemos es que capitalice el texto a mostrar en cada botón independientemente de como esté almacenado en el array -->
+            {{ item | titlecase }}
+        </a> 
+    </div>
+</div>
